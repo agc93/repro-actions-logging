@@ -1,0 +1,22 @@
+name: Console Test Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.101'
+    - name: Restore
+      shell: bash
+      run: |
+          dotnet restore
+    - name: Validate unex config
+      shell: bash
+      run: |
+        dotnet run
