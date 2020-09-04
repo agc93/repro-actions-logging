@@ -16,7 +16,7 @@ jobs:
       shell: bash
       run: |
           dotnet restore
-    - name: Validate unex config
+    - name: Run logging sample
       shell: bash
       run: |
         dotnet run
