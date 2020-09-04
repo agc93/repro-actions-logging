@@ -11,7 +11,7 @@ namespace logging_actions
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World in plain old System.Console-land!");
-            AnsiConsole.MarkupLine("[[whatever] checkout this cool [bold red]formatting[/]");
+            AnsiConsole.MarkupLine("[[whatever]] checkout this cool [bold red]formatting[/]");
             var loggerFactory =  LoggerFactory.Create(b => {
                 b
                     .AddFilter("logging_actions.Program", LogLevel.Debug)
